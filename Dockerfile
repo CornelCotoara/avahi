@@ -17,7 +17,7 @@ RUN sed -i 's/.*enable-dbus=.*/enable-dbus=no/' /etc/avahi/avahi-daemon.conf \
 RUN cat /etc/avahi/avahi-daemon.conf
 
 
-COPY files /
+COPY docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/sbin/tini", "--", "/docker-entrypoint.sh"]
 
