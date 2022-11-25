@@ -1,12 +1,13 @@
 FROM alpine:3
 
 # install packages
-RUN apk --no-cache --no-progress add avahi avahi-tools tini sed
+RUN apk --no-cache --no-progress add avahi avahi-tools tini
 
 # remove default services
 RUN rm /etc/avahi/services/*
 
 # disable d-bus && ipv6 publish
+RUN cat /etc/avahi/avahi-daemon.conf
 RUN sed -i 's/.*enable-dbus=.*/enable-dbus=no/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*enable-reflector=.*/enable-reflector=yes/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*use-ipv6=.*/enable-reflector=no/' /etc/avahi/avahi-daemon.conf \
