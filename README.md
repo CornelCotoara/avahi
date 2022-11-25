@@ -1,4 +1,4 @@
 # avahi
-avahi@alpine3
-ipv6 is disabled by default
-<code>docker pull ghcr.io/cornelcotoara/avahi:main</code>
+avahi@alpine3 <br />
+ipv6 is disabled by default<br />
+<code>docker pull ghcr.io/cornelcotoara/avahi:main</code><br />
