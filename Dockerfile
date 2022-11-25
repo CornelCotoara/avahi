@@ -9,7 +9,7 @@ RUN rm /etc/avahi/services/*
 # disable d-bus && ipv6 publish
 RUN sed -i 's/.*enable-dbus=.*/enable-dbus=no/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*enable-reflector=.*/enable-reflector=yes/' /etc/avahi/avahi-daemon.conf \
-  && sed -i 's/.*use-ipv6=.*/enable-reflector=no/' /etc/avahi/avahi-daemon.conf \
+  && sed -i 's/.*use-ipv6=.*/use-ipv6=no/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*publish-aaaa-on-ipv4=.*/publish-aaaa-on-ipv4=no/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*publish-a-on-ipv6=.*/publish-a-on-ipv6=no/' /etc/avahi/avahi-daemon.conf 
   
