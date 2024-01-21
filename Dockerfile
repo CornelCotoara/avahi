@@ -13,7 +13,7 @@ RUN sed -i 's/.*enable-dbus=.*/enable-dbus=no/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*publish-aaaa-on-ipv4=.*/publish-aaaa-on-ipv4=no/' /etc/avahi/avahi-daemon.conf \
   && sed -i 's/.*publish-a-on-ipv6=.*/publish-a-on-ipv6=no/' /etc/avahi/avahi-daemon.conf 
   
-#display avahi-daemo.conf content
+#display avahi-daemon.conf content
 RUN cat /etc/avahi/avahi-daemon.conf
 
 
